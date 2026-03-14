@@ -92,7 +92,7 @@ build_app <- function(poll_interval_sec = 10) {
       "))
     ),
     shiny::div(class = "header",
-      shiny::h2("ICE Train Status Dashboard"),
+      shiny::h2("ICE Portal Data Dashboard"),
       shiny::textOutput("train_info", inline = TRUE)
     ),
     shiny::fluidRow(

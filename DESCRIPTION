@@ -1,6 +1,6 @@
-Package: dbStats
+Package: icePortal
 Type: Package
-Title: ICE Train Status Dashboard
+Title: ICE Portal Data Dashboard
 Version: 0.1.0
 Authors@R: c(
     person(
