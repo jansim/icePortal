@@ -687,6 +687,12 @@ build_app <- function(poll_interval_sec = 10) {
                                         paste0("+", val)))
         }
       }
+      fmt_stay <- function(arr, dep) {
+        if (is.na(arr) || is.na(dep)) return("")
+        mins <- as.numeric(difftime(dep, arr, units = "mins"))
+        if (is.na(mins) || mins < 0) return("")
+        paste0(round(mins), " min")
+      }
 
       header <- shiny::tags$tr(
         shiny::tags$th("Station"),
@@ -696,6 +702,8 @@ build_app <- function(poll_interval_sec = 10) {
         shiny::tags$th("Dep (sched)"),
         shiny::tags$th("Dep (actual)"),
         shiny::tags$th("Delay"),
+        shiny::tags$th("Stay (sched)"),
+        shiny::tags$th("Stay (actual)"),
         shiny::tags$th("Track")
       )
 
@@ -716,6 +724,8 @@ build_app <- function(poll_interval_sec = 10) {
           shiny::tags$td(fmt_time(sp$sched_dep[i])),
           shiny::tags$td(fmt_time(sp$actual_dep[i])),
           shiny::tags$td(shiny::HTML(fmt_delay(sp$dep_delay[i]))),
+          shiny::tags$td(fmt_stay(sp$sched_arr[i], sp$sched_dep[i])),
+          shiny::tags$td(fmt_stay(sp$actual_arr[i], sp$actual_dep[i])),
           shiny::tags$td(track_str)
         )
       })
