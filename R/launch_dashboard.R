@@ -221,8 +221,7 @@ build_app <- function(poll_interval_sec = 10) {
       df <- ts_data()
       if (nrow(df) < 2) return(NULL)
       ggplot2::ggplot(df, ggplot2::aes(x = speed)) +
-        ggplot2::geom_histogram(fill = "#ec0016", color = "white",
-                                bins = max(5, min(30, nrow(df) / 2))) +
+        ggplot2::geom_histogram(fill = "#ec0016", color = "white")) +
         ggplot2::labs(x = "Speed (km/h)", y = "Count") +
         ggplot2::theme_minimal() +
         ggplot2::theme(text = ggplot2::element_text(size = 13))
