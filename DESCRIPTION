@@ -4,8 +4,8 @@ Title: ICE Portal Data Dashboard
 Version: 0.1.0
 Authors@R: c(
     person(
-      "Jane", "Doe",
-      email = "jane@example.com",
+      "Jan", "Simson",
+      email = "iceportal-pkg@simson.io",
       role = c("aut", "cre")
     )
   )
@@ -21,7 +21,6 @@ Imports:
     jsonlite,
     ggplot2,
     ggrepel,
-    sf
-Suggests:
+    sf,
     rnaturalearth,
     rnaturalearthdata
