@@ -1,1 +1,12 @@
-exportPattern("^[[:alpha:]]+")
+export(launch_dashboard)
+
+importFrom(httr, GET, content, status_code, timeout)
+importFrom(jsonlite, fromJSON)
+importFrom(shiny, shinyApp, runApp, fluidPage, fluidRow, column,
+           tags, div, h2, h4, hr, em, textOutput, plotOutput,
+           renderText, renderPlot, reactiveVal, reactivePoll,
+           observeEvent, HTML)
+importFrom(ggplot2, ggplot, aes, geom_line, geom_point, geom_step,
+           geom_histogram, labs, theme_minimal, theme, element_text,
+           scale_y_continuous, scale_color_manual)
+importFrom(dplyr, "%>%")

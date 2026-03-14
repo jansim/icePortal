@@ -1,6 +1,6 @@
 Package: dbStats
 Type: Package
-Title: What the Package Does (Title Case)
+Title: ICE Train Status Dashboard
 Version: 0.1.0
 Authors@R: c(
     person(
@@ -9,8 +9,15 @@ Authors@R: c(
       role = c("aut", "cre")
     )
   )
-Description: More about what it does (maybe more than one line).
-    Continuation lines should be indented.
-License: What license is it under?
+Description: A Shiny dashboard that periodically queries the Deutsche Bahn
+    ICE Portal API to collect train status data and display time series
+    visualizations of speed, connectivity, and other metrics.
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
+Imports:
+    shiny,
+    httr,
+    jsonlite,
+    ggplot2,
+    dplyr
