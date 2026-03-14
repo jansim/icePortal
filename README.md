@@ -1,4 +1,4 @@
-# icePortal 📈
+# icePortal 🚄📈
 
 A Shiny dashboard that queries the Deutsche Bahn ICE Portal API to collect and visualize train status data while you ride.
 
