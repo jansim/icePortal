@@ -25,6 +25,15 @@ Connect to the on-board WiFi of a Deutsche Bahn ICE train, then run:
 icePortal::launch_dashboard()
 ```
 
+## macOS Menubar App
+
+If you'd rather glance at the current speed, next stop and delay than plot the whole trip, there's also a small native macOS menubar app in [`macos/IcePortalBar`](./macos/IcePortalBar):
+
+```sh
+cd macos/IcePortalBar
+swift run
+```
+
 ## License
 
 MIT
